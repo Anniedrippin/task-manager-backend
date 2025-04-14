@@ -31,9 +31,22 @@ A full-stack task management app built using **Laravel (API)** and **Vue.js (SPA
 ---
 
 ## 📦 Project Structure
-
+BACKEND
+1.git clone https://github.com/Anniedrippin/task-manager-backend.git
+2.cd task-manager-backend
+3. composer install
+4. cp .env.example .env
+5. php artisan key:generate
+6. php artisan migrate
+7. php artisan serve
+FRONTEND
+1. cd task_manager_frontend
+2. npm run dev
 
 ---
+
+## 📦 AWS Short write up
+For this AWS setup, I deployed a Laravel application on an EC2 instance running Ubuntu. After setting up the instance, I installed Apache, PHP, and MySQL to run the Laravel app. I configured the Apache server with the necessary virtual hosts and ensured the app's public directory was accessible. I also configured security group rules to allow inbound traffic on ports 22 (SSH), 80 (HTTP), and 443 (HTTPS) from any source. The app was accessible via the EC2 public IP (56.228.18.112), confirming the server is running correctly. Additionally, I edited the /etc/hosts file to allow access using a custom local domain (yourapp.local) for easier development access. The setup is ready for further customization, including SSL configuration for secure HTTPS access.
 
 ### Notes on Apache:
 
@@ -51,3 +64,4 @@ A full-stack task management app built using **Laravel (API)** and **Vue.js (SPA
     </Directory>
 </VirtualHost>
 
+---
